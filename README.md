@@ -15,7 +15,7 @@
 
 ### 硬體環境
 
-* 作業系統：Windows 10
+* 作業系統：Windows 10 Professional 64-bit
 * CPU：Intel® Core™ i5-12400F @ 2.50GHz
 * 記憶體大小：16GB
 
@@ -46,8 +46,8 @@
 * gap：限制follows關係的最大距離，預設為無限
 * timeout：Z-Miner演算法執行時間上限(秒)，預設為10000
 * level：Frequent arrangements的event數目上限，預設為無限
-* printF：是否輸出簡略版csv檔案(True/False)，詳見[輸出檔F](#輸出檔f)，預設為False
-* printL：是否輸出詳盡版csv檔案(True/False)，詳見[輸出檔L](#輸出檔l)，預設為False
+* printF：是否輸出簡略版csv檔案(True/False)，詳見[檔案輸出F](#檔案輸出f)，預設為False
+* printL：是否輸出詳盡版csv檔案(True/False)，詳見[檔案輸出L](#檔案輸出l)，預設為False
 
 以下為執行本程式的一個例子：
 
@@ -57,6 +57,26 @@
 
 ## 執行結果
 
-### 輸出檔F
+### Terminal 輸出
 
-### 輸出檔L
+>TEST WITH (資料集檔名) DATASET<br>
+>TOTAL SEQUENCE: (e-sequence總數)<br>
+>TOTAL DISTINCT EVENTS: (event種類個數)<br>
+>TOTAL INTERVALS: (event interval總數)<br>
+>AVERAGE INTERVAL PER SEQ: (一個e-sequence的平均event interval數)<br>
+>AVERAGE TIMESPAN: 2358.8396334478807<br>
+>TEST WITH (資料集檔名) DATASET<br>
+>########## Z-MINER_RV ##########<br>
+>1-1. MINIMUM SUPPORT: 8.73<br>
+>1-2. EPSILON CONSTRAINT: 5.0<br>
+>1-4. TIMEOUT: 300<br>
+>1-5. LEVEL: 8.0<br>
+>2. NUMBER OF E-SEQUENCES: 873<br>
+>3. TOTAL COMPARISON COUNTS: 20513<br>
+>4. TOTAL FREQUENT ARRANGEMENTS: 1110<br>
+>5. TOTAL TIME CONSUMED: 0.34375<br>
+>6. extendZ() called count: (extendZ()呼叫總次數)
+
+### 檔案輸出F
+
+### 檔案輸出L
