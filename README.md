@@ -36,7 +36,7 @@
 
 本程式透過以下指令執行(與原程式相同)：
 
-`python ZMiner_rv.py filename minSup epsilon gap timeout level printF printL`
+`python ZMiner_rv.py [filename] [minSup] [epsilon] [gap] [timeout] [level] [printF] [printL]`
 
 ### 參數說明
 
@@ -59,23 +59,23 @@
 
 ### Terminal 輸出
 
->TEST WITH (資料集檔名) DATASET<br>
->TOTAL SEQUENCE: (e-sequence總數)<br>
->TOTAL DISTINCT EVENTS: (event種類個數)<br>
->TOTAL INTERVALS: (event interval總數)<br>
->AVERAGE INTERVAL PER SEQ: (一個e-sequence的平均event interval數)<br>
->AVERAGE TIMESPAN: 2358.8396334478807<br>
->TEST WITH (資料集檔名) DATASET<br>
+>TEST WITH [資料集檔名] DATASET<br>
+>TOTAL SEQUENCE: [e-sequence總數]<br>
+>TOTAL DISTINCT EVENTS: [event種類個數]<br>
+>TOTAL INTERVALS: [event interval總數]<br>
+>AVERAGE INTERVAL PER SEQ: [一個e-sequence的平均event interval數]<br>
+>AVERAGE TIMESPAN: [一個e-sequence的平均timespan]<br>
+>TEST WITH [資料集檔名] DATASET<br>
 >########## Z-MINER_RV ##########<br>
->1-1. MINIMUM SUPPORT: 8.73<br>
->1-2. EPSILON CONSTRAINT: 5.0<br>
->1-4. TIMEOUT: 300<br>
->1-5. LEVEL: 8.0<br>
->2. NUMBER OF E-SEQUENCES: 873<br>
->3. TOTAL COMPARISON COUNTS: 20513<br>
->4. TOTAL FREQUENT ARRANGEMENTS: 1110<br>
->5. TOTAL TIME CONSUMED: 0.34375<br>
->6. extendZ() called count: (extendZ()呼叫總次數)
+>1-1. MINIMUM SUPPORT: [minSup count]<br>
+>1-2. EPSILON CONSTRAINT: [epsilon]<br>
+>1-4. TIMEOUT: [timeout]<br>
+>1-5. LEVEL: [level]<br>
+>2. NUMBER OF E-SEQUENCES: [e-sequence總數]<br>
+>3. TOTAL COMPARISON COUNTS: [在initZ()與extendZ()中，檢查舊event與新event是否有frequent relation的次數]<br>
+>4. TOTAL FREQUENT ARRANGEMENTS: [frequent arrangement總數]<br>
+>5. TOTAL TIME CONSUMED: [Z-Miner演算法執行時間]<br>
+>6. extendZ() called count: [extendZ()呼叫總次數]
 
 ### 檔案輸出F
 
