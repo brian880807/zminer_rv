@@ -79,4 +79,28 @@
 
 ### 檔案輸出F
 
+* 輸出檔名：F_[資料集名稱]\_[minSup]\_[epsilon]\_[gap]\_[timeout].csv
+* 一列表示一個frequent arrangement
+* 欄位依序為該arrangement的event labels, relations, frequency
+
+for example:
+
+| event | relations | frequency |
+|-----|-----|-----|
+| ('17','10','179') | fcc | 13 |
+
+表示..
+
 ### 檔案輸出L
+
+* 輸出檔名：L_[資料集名稱]\_[minSup]\_[epsilon]\_[gap]\_[timeout].csv
+* 一列表示一個frequent arrangement與其所在資料集中的位置
+* 欄位依序為該arrangement的event labels, relations, frequency, 所在e-sequence, event interval (event label, start time, end time)
+
+for example:
+
+| event | relations | frequency | e-sequence | intervals |
+|-----|-----|-----|-----|-----|
+| ('78','98','179') | ecc | 10 | 647 | (78, 68, 2768),(98, 68, 2768),(179, 434, 801) |
+
+表示..
