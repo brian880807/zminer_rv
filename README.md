@@ -46,8 +46,8 @@
 * gap：限制follows關係的最大距離，預設為無限
 * timeout：Z-Miner演算法執行時間上限(秒)，預設為10000
 * level：Frequent arrangements的event數目上限，預設為無限
-* printF：是否輸出簡略版csv檔案(True/False)，詳見[檔案輸出F](#檔案輸出f)，預設為False
-* printL：是否輸出詳盡版csv檔案(True/False)，詳見[檔案輸出L](#檔案輸出l)，預設為False
+* printF：是否輸出簡略版結果csv檔案(True/False)，內容詳見[檔案輸出F](#檔案輸出f)，預設為False
+* printL：是否輸出詳盡版結果csv檔案(True/False)，內容詳見[檔案輸出L](#檔案輸出l)，預設為False
 
 以下為執行本程式的一個例子：
 
@@ -83,13 +83,16 @@
 * 一列表示一個frequent arrangement
 * 欄位依序為該arrangement的event labels, relations, frequency
 
-for example:
+For example (F_ASL_BU_1_0.01_10_10_300.csv):
 
 | event | relations | frequency |
 |-----|-----|-----|
-| ('17','10','179') | fcc | 13 |
+| ('176', '150', '24') | soc | 12 |
+| ('79', '9', '172') | fcc | 10 |
 
-表示..
+'176'與'150'為s(left-matches)，'150'與'24'為o(overlaps)，'176'與'24'為c(contains)；此arrangement出現12次。
+
+'79'與'9'為f(right-matches)，'9'與'172為c，'79'與'172'為c；此arrangement出現10次。
 
 ### 檔案輸出L
 
@@ -97,10 +100,13 @@ for example:
 * 一列表示一個frequent arrangement與其所在資料集中的位置
 * 欄位依序為該arrangement的event labels, relations, frequency, 所在e-sequence, event interval (event label, start time, end time)
 
-for example:
+For example (L_ASL_BU_1_0.01_10_10_300.csv):
 
 | event | relations | frequency | e-sequence | intervals |
 |-----|-----|-----|-----|-----|
+| ('78','98','179') | ecc | 10 | 804 | (78, 1, 435),(98, 1, 435),(179, 168, 268) |
 | ('78','98','179') | ecc | 10 | 647 | (78, 68, 2768),(98, 68, 2768),(179, 434, 801) |
 
-表示..
+'78'與'98'為e(matches)，'98'與'179'為c(contains)，'78'與'179'為c；此arrangement出現10次。
+
+其中在e-sequence 804與647各出現一次，event intervals分別為(78, 1, 435),(98, 1, 435),(179, 168, 268)以及(78, 68, 2768),(98, 68, 2768),(179, 434, 801)。
